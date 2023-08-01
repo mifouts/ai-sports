@@ -12,7 +12,7 @@ export default function Home() {
 
         <Divider className="my-10" />
 
-        
+
         <Card className="bg-gradient-to-br from-[#552586] to-[#6A359C]">
 
         </Card>
