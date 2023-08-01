@@ -7,8 +7,13 @@ export default function Home() {
   return (
     <main className="text-6xl">
       <Card>
-        <Text>Sports AI</Text>
-        <Subtitle>Powered by OpenAI, Next.js 13.3, Tailwind CSS, Tremor 2.0 + More</Subtitle>
+        <Text className="text-6xl font-bold text-center mb-10">Sports AI</Text>
+        <Subtitle className="text-xl text-center">Powered by OpenAI, Next.js 13.3, Tailwind CSS, Tremor 2.0 + More</Subtitle>
+
+        <Divider className="my-10" />
+        <Card className="bg-gradient-to-br from-[#552586] to-[#6A359C]">
+
+        </Card>
       </Card>
     </main>
   )
