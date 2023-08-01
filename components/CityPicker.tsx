@@ -11,11 +11,15 @@ const options = Country.getAllCountries().map(country => ({
         isoCode: country.isoCode,
     },
     label: country.name,
-}))
+}));
 
 function CityPicker() {
   return (
-    <div>CityPicker</div>
+    <div>
+        <Select 
+        options={options} 
+        />
+    </div>
   )
 }
 
