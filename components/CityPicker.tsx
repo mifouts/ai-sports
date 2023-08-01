@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation';
 import { Country, City } from "country-state-city"
 import Select from 'react-select';
 
@@ -36,6 +37,8 @@ const options = Country.getAllCountries().map(country => ({
 function CityPicker() {
     const [selectedCountry, setSelectedCountry] = useState<option>(null);
     const [selectedCity, setSelectedCity] = useState<cityOption>(null);
+    const router = useRouter();
+
   return (
     <div>
         <Select 
