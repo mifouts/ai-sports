@@ -3,6 +3,7 @@
 import { Card, Divider, Subtitle, Text } from "@tremor/react";
 
 
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#552586] to-[#6A359C] p-10 flex flex-col justify-center items-center">
@@ -14,7 +15,7 @@ export default function Home() {
 
 
         <Card className="bg-gradient-to-br from-[#552586] to-[#6A359C] rounded-lg">
-
+          
         </Card>
       </Card>
     </div>
