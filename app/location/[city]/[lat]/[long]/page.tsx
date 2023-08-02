@@ -10,7 +10,7 @@ type Props = {
 
 function SportsPage({ params: { city, lat, long }}: Props) {
   return (
-    <div>Welcome to the sports page {city} {lat} {long}</div>
+    <div>Welcome to the sports page: {city} {lat} {long}</div>
   )
 }
 
