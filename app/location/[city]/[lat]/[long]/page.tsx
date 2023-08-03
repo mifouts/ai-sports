@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
@@ -24,7 +26,25 @@ function SportsPage({ params: { city, lat, long }}: Props) {
     setNews(response.data)
   }
   return (
-    <div>Welcome to the sports page: {city} {lat} {long}</div>
+    <div>
+      {/* <InformationPanel /> */}
+      <div>
+        <div className='p-5'>
+          <div className="pb-5">
+            <h2 className="text-xl font-bold">Todays Overview</h2>
+            <p className="text-sm text-gray-400">
+            Last Updated at: {''}
+            {new Date().toLocaleString()}
+            </p>
+          </div>
+        </div>
+
+
+        <div>
+          {/* CalloutCard */}
+        </div>
+      </div>
+    </div>
   )
 }
 
