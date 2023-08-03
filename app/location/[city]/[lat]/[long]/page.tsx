@@ -15,3 +15,6 @@ function SportsPage({ params: { city, lat, long }}: Props) {
 }
 
 export default SportsPage
+
+
+// api key GET https://newsapi.org/v2/top-headlines?q=sports&country=us&apiKey=c39291df01d444dd91ce27ae5428f113
