@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import CalloutCard from '@/components/CalloutCard';
 
 type Props = {
   params: {
@@ -41,7 +42,13 @@ function SportsPage({ params: { city, lat, long }}: Props) {
 
 
         <div>
-          {/* CalloutCard */}
+          <CalloutCard 
+          message='This is where GPT summary will be'/>
+        </div>
+        <div className="container">
+          {news ? (
+            <div className="row"></div>
+          )}
         </div>
       </div>
     </div>
