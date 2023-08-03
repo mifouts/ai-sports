@@ -13,7 +13,9 @@ type Props = {
 function SportsPage({ params: { city, lat, long }}: Props) {
   const [getNews, setGetNews] = useState("")
 
-  
+  const getNews => () => {
+    
+  }
   return (
     <div>Welcome to the sports page: {city} {lat} {long}</div>
   )
