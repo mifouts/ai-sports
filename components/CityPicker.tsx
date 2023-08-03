@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/navigation';
 import { Country, City } from "country-state-city"
 import Select from 'react-select';
-import { GlobeIcon } from "@heroicons/react/solid" 
+import { GlobeIcon } from "@heroicons/react/solid"; 
 
 
 
