@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
 type Props = {
@@ -11,10 +11,17 @@ type Props = {
 
 
 function SportsPage({ params: { city, lat, long }}: Props) {
-  const [getNews, setGetNews] = useState("")
+  const [news, setNews] = useState("")
 
-  const getNews => () => {
-    
+  useEffect (() => {
+    getNews()
+  },[])
+
+  const getNews = async () => {
+    const response = await axios.get(
+      "https://newsapi.org/v2/top-headlines?q=sports&country=us&apiKey=c39291df01d444dd91ce27ae5428f113"
+    );
+    setNews(response.data)
   }
   return (
     <div>Welcome to the sports page: {city} {lat} {long}</div>
