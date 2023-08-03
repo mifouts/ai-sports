@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios';
 
 type Props = {
   params: {
@@ -8,7 +9,11 @@ type Props = {
   }
 }
 
+
 function SportsPage({ params: { city, lat, long }}: Props) {
+  const [getNews, setGetNews] = useState("")
+
+  
   return (
     <div>Welcome to the sports page: {city} {lat} {long}</div>
   )
