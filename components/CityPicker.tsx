@@ -6,6 +6,8 @@ import { Country, City } from "country-state-city"
 import Select from 'react-select';
 import { GlobeIcon } from "@heroicons/react/solid" 
 
+
+
 type option = {
     value: {
         latitude: string;
@@ -26,21 +28,19 @@ type cityOption = {
     label: string;
 } | null;
 
-const countryStateCity = require("country-state-city");
 
 
-//const options = Country.getAllCountries().map(country => ({
-   // value: {
-   //     latitude: country.latitude,
-   //     longitude: country.longitude,
-  //      isoCode: country.isoCode,
-  //  },
-  //  label: country.name,
-//}));
 
-const unitedStates = countryStateCity.getCountries().find((country: { isoCode: string; }) => country.isoCode === "US");
+const options = Country.getAllCountries().map(country => ({
+    value: {
+       latitude: country.latitude,
+        longitude: country.longitude,
+        isoCode: country.isoCode,
+    },
+    label: country.name,
+}));
 
-const statesInUS = countryStateCity.getStatesByCountryId(unitedStates.id);
+
 
 
 function CityPicker() {
@@ -69,7 +69,7 @@ function CityPicker() {
         className='text-black'
         value={selectedCountry}
         onChange={handleSelectedCountry} 
-        options={unitedStates} 
+        options={options} 
         />
         </div>
 
@@ -83,17 +83,17 @@ function CityPicker() {
             className='text-black'
             value={selectedCity}
             onChange={handleSelectedCity} 
-            options={statesInUS
-                //City.getCitiesOfCountry(selectedCountry.value.isoCode)?.map(state => ({
-                   // value: {
-                      //  latitude: state.latitude!,
-                       // longitude: state.longitude!,
-                       // countryCode: state.countryCode,
-                      //  name: state.name,
-                       // stateCode: state.stateCode,
-                 //   },
-                 //   label: state.name,
-               // }))
+            options={
+                City.getCitiesOfCountry(selectedCountry.value.isoCode)?.map(state => ({
+                    value: {
+                        latitude: state.latitude!,
+                        longitude: state.longitude!,
+                        countryCode: state.countryCode,
+                        name: state.name,
+                        stateCode: state.stateCode,
+                    },
+                    label: state.name,
+                }))
             } 
             />
             </div>
