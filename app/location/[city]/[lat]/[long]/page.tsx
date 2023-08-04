@@ -9,12 +9,14 @@ type Props = {
     city: string,
     lat: string,
     long: string,
+    
   }
 }
 
 
+
 function SportsPage({ params: { city, lat, long }}: Props) {
-  const [news, setNews] = useState("")
+  const [news, setNews] = useState([])
 
   useEffect (() => {
     getNews()
@@ -46,9 +48,13 @@ function SportsPage({ params: { city, lat, long }}: Props) {
           message='This is where GPT summary will be'/>
         </div>
         <div className="container">
-          {news ? (
-            <div className="row"></div>
-          )}
+          {news.map((data, index) => (
+            <div className="card" key={index}>
+              <div className="card-body">
+                <div className="card-title">{data.title}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
