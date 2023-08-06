@@ -16,18 +16,6 @@ type Props = {
 
 
 function SportsPage({ params: { city, lat, long }}: Props) {
-  const [news, setNews] = useState([])
-
-  useEffect (() => {
-    getNews()
-  },[])
-
-  const getNews = async () => {
-    const response = await axios.get(
-      "https://newsapi.org/v2/top-headlines?q=sports&country=us&apiKey=c39291df01d444dd91ce27ae5428f113"
-    );
-    setNews(response.data)
-  }
   return (
     <div>
       {/* <InformationPanel /> */}
@@ -48,13 +36,7 @@ function SportsPage({ params: { city, lat, long }}: Props) {
           message='This is where GPT summary will be'/>
         </div>
         <div className="container">
-          {news.map((data, index) => (
-            <div className="card" key={index}>
-              <div className="card-body">
-                <div className="card-title"></div>
-              </div>
-            </div>
-          ))}
+         
         </div>
       </div>
     </div>
