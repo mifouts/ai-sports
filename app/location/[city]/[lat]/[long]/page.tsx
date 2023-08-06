@@ -51,7 +51,7 @@ function SportsPage({ params: { city, lat, long }}: Props) {
           {news.map((data, index) => (
             <div className="card" key={index}>
               <div className="card-body">
-                <div className="card-title">{data.title}</div>
+                <div className="card-title"></div>
               </div>
             </div>
           ))}
