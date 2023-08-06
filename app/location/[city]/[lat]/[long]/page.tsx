@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
 import CalloutCard from '@/components/CalloutCard';
 
 type Props = {
@@ -44,6 +43,3 @@ function SportsPage({ params: { city, lat, long }}: Props) {
 }
 
 export default SportsPage
-
-
-// api key GET https://newsapi.org/v2/top-headlines?q=sports&country=us&apiKey=c39291df01d444dd91ce27ae5428f113
