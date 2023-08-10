@@ -95,3 +95,5 @@ const fetchWeatherQuery = gql`
     }
   }
 `;
+
+export default fetchWeatherQuery;
