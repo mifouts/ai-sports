@@ -1,4 +1,4 @@
-"use client"
+
 
 import { getClient } from '@/apollo-client';
 import CalloutCard from '@/components/CalloutCard';
@@ -15,10 +15,10 @@ type Props = {
 
 
 
-function WeatherPage({ params: { city, lat, long }}: Props) {
+async function WeatherPage({ params: { city, lat, long }}: Props) {
   const client = getClient();
 
-  const { data } = client.query({
+  const { data } = await client.query({
     query: fetchWeatherQuery,
     variables: {
       current_weather: "true",
