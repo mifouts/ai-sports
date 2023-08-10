@@ -31,3 +31,19 @@ interface Daily {
     uv_index_max: string;
     weathercode: string;
   }
+
+  interface Hourly {
+    apparent_temperature: [number]
+    precipitation: [number]
+    precipitation_probability: [number]
+    rain: [number]
+    relativehumidity_2m: [number]
+    showers: [number]
+    snow_depth: [number]
+    snowfall: [number]
+    temperature_2m: [number]
+    time: [string]
+    uv_index: [number]
+    uv_index_clear_sky: [number]
+    windgusts_10m: [number]
+  }
