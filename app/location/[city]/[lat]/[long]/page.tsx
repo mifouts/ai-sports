@@ -1,7 +1,8 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import { getClient } from '@/apollo-client';
 import CalloutCard from '@/components/CalloutCard';
+import fetchWeatherQuery from '@/graphQL/queries/fetchWeatherQueries';
 
 type Props = {
   params: {
@@ -14,7 +15,22 @@ type Props = {
 
 
 
-function SportsPage({ params: { city, lat, long }}: Props) {
+function WeatherPage({ params: { city, lat, long }}: Props) {
+  const client = getClient();
+
+  const { data } = client.query({
+    query: fetchWeatherQuery,
+    variables: {
+      current_weather: "true",
+      longitude: long,
+      latitude: lat,
+      timezone: 'EST'
+    }
+  })
+
+  const results: Root = data.myQuery;
+  console.log(results)
+
   return (
     <div>
       {/* <InformationPanel /> */}
@@ -42,4 +58,4 @@ function SportsPage({ params: { city, lat, long }}: Props) {
   )
 }
 
-export default SportsPage
+export default WeatherPage;
