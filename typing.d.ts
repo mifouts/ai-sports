@@ -47,3 +47,19 @@ interface Daily {
     uv_index_clear_sky: [number]
     windgusts_10m: [number]
   }
+
+  interface HourlyUnits {
+  apparent_temperature: String;
+  precipitation: String;
+  precipitation_probability: String;
+  rain: String;
+  relativehumidity_2m: String;
+  showers: String;
+  snow_depth: String;
+  snowfall: String;
+  temperature_2m: String;
+  time: String;
+  uv_index: String;
+  uv_index_clear_sky: String;
+  windgusts_10m: String;
+  }
