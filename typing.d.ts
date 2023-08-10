@@ -63,3 +63,18 @@ interface Daily {
   uv_index_clear_sky: String;
   windgusts_10m: String;
   }
+
+  interface Root {
+    current_weather: CurrentWeather;
+    daily: Daily;
+    daily_units: DailyUnits;
+    elevation: number;
+    generationtime_ms: number;
+    hourly: Hourly;
+    hourly_units: HourlyUnits;
+    latitude: number;
+    longitude: number;
+    timezone: String;
+    timezone_abbreviation: String;
+    utc_offset_seconds: number;
+  }
