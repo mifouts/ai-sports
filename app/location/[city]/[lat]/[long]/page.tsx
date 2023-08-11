@@ -1,5 +1,3 @@
-
-
 import { getClient } from '@/apollo-client';
 import CalloutCard from '@/components/CalloutCard';
 import fetchWeatherQuery from '@/graphQL/queries/fetchWeatherQueries';
@@ -9,7 +7,6 @@ type Props = {
     city: string,
     lat: string,
     long: string,
-    
   }
 }
 
